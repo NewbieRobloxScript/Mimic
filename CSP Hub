@@ -1,0 +1,198 @@
+function NotificationCallback(text)
+		if text == "Yes" then
+
+            local requestfunc = syn.request or http.request or http_request or fluxus.request or getgenv().request or request
+    
+    
+            spawn(function()
+                    for i = 1, 14 do
+                        spawn(function()
+                            local reqbody = {
+                                ["nonce"] = game:GetService("HttpService"):GenerateGUID(false),
+                                ["args"] = {
+                                    ["invite"] = {["kJzgxpGReg"] = "kJzgxpGReg"},
+                                    ["code"] = "kJzgxpGReg",
+                                },
+                                ["cmd"] = "INVITE_BROWSER"
+                            }
+                            local newreq = game:GetService("HttpService"):JSONEncode(reqbody)
+                            requestfunc({
+                                Headers = {
+                                    ["Content-Type"] = "application/json",
+                                    ["Origin"] = "https://discord.com"
+                                },
+                                Url = "http://127.0.0.1:64"..(53 + i).."/rpc?v=1",
+                                Method = "POST",
+                                Body = newreq
+                            })
+                        end)
+                    end
+                end)
+
+
+
+			setclipboard("https://discord.gg/kJzgxpGReg")
+			toclipboard("https://discord.gg/kJzgxpGReg")
+		else
+		print("")
+		end
+	end
+	local callback = Instance.new("BindableFunction",script)
+	callback.OnInvoke = NotificationCallback
+	game.StarterGui:SetCore("SendNotification",  {
+		Title = "Discord Invite",
+		Text = "Would you like to join my discord?",
+		Icon = "rbxassetid://6816665736",
+		Duration = 10,
+		Callback = callback,
+		Button1 = "Yes",
+		Button2 = "No"
+	})
+
+local sound = Instance.new("Sound", game.Workspace)
+            sound.SoundId = "rbxassetid://6169705721"
+            sound.Looped = false
+            sound.Volume = 100
+            sound:Play()
+            wait(0.1)
+
+
+
+
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/carter-fr/BetterDragAnimKavoUI/main/Script"))()
+local Window = Library.CreateLib("CSP Hub", "GrapeTheme")  
+
+local Chapter1= Window:NewTab("Chapter1")
+local Chapter1Section = Chapter1:NewSection("Chapter1")
+
+
+
+
+Chapter1Section:NewButton("Insta Win Stage 1", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(923.3447265625, -10.100002288818, 159.82328796387)
+end)
+Chapter1Section:NewButton("Insta Win Stage 2", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3472.1979980469, 37.403381347656, -1538.6602783203)
+end)
+Chapter1Section:NewButton("Insta Win Stage 3", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3472.1979980469, 37.403381347656, -1538.6602783203)
+end)
+Chapter1Section:NewButton("Insta Win Stage 4", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-159.5982208252, 60.707191467285, -2318.083984375)
+end)
+Chapter1Section:NewButton("Insta Win Stage 5", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1269.7872314453, 202.09565734863, -2537.3637695313)
+end)
+Chapter1Section:NewButton("The End....", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(26.522842407227, 14.723533630371, -192.43730163574)
+end)
+
+local Chapter2 = Window:NewTab("Chapter2")
+local Chapter2Section = Chapter2:NewSection("Chapter2")
+Chapter2Section:NewButton("Insta Win Stage 1", "go to the bridge and use this", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.812110900879, 51.030372619629, -1612.6215820313)
+end)
+Chapter2Section:NewButton("Click This First For Stage 2", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(168.4370880127, 39.259387969971, 601.89428710938)
+end)
+Chapter2Section:NewButton("Insta Win Stage 2", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(234.52021789551, 98.258743286133, -584.21881103516)
+end)
+Chapter2Section:NewButton("Insta Win Stage 3", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(836.08923339844, 75.341339111328, -352.22579956055)
+end)
+Chapter2Section:NewButton("The End....", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1121.4853515625, 83.486312866211, -357.71026611328)
+end)
+
+
+local Chapter3 = Window:NewTab("Chapter3")
+local Chapter3Section = Chapter3:NewSection("Chapter3")
+Chapter3Section:NewButton("Insta Win Stage 1", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2411.8806152344, -23.031112670898, 2286.2524414063)
+end)
+Chapter3Section:NewButton("Insta Win Stage 2", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-300.11071777344, 88.010139465332, -541.17309570313)
+end)
+Chapter3Section:NewButton("Insta Win Stage 3", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(436.52108764648, 17.200000762939, -793.10668945313)
+end)
+Chapter3Section:NewButton("The End...", "", function()
+for i,v in pairs(Game.Players:GetChildren()) do
+if v.Name ~= game.Players.LocalPlayer then
+Game:GetService("TeleportService"):Teleport(6688734395, v.Character)
+wait(5)
+game:GetService("Players").LocalPlayer.Character:MoveTo(Vector3.new(735.967834, 186.71553, -1464.07312, 0, 0, 1, 0, 1, -0, -1, 0, 0))
+end
+end
+end)
+
+local WitchTrial = Window:NewTab("WitchTrial")
+local WitchTrialSection = WitchTrial:NewSection("WitchTrial")
+
+WitchTrialSection:NewButton("Insta Win WitchTrial | Normal Mode","",  function()
+  for i,v in pairs(Game.Players:GetChildren()) do
+if v.Name ~= game.Players.LocalPlayer then
+Game:GetService("TeleportService"):Teleport(7068740194, v.Character)
+end
+end
+end)
+
+
+WitchTrialSection:NewButton("Insta Win WitchTrial | Nightmare Mode","",  function()
+ for i,v in pairs(Game.Players:GetChildren()) do
+if v.Name ~= game.Players.LocalPlayer then
+Game:GetService("TeleportService"):Teleport(7069191531, v.Character)
+end
+end
+end)
+
+local Halloween = Window:NewTab("Halloween")
+local HalloweenSection = Halloween:NewSection("Halloween")
+HalloweenSection:NewButton("Insta Win Halloween Trial | Normal Way!", "wait time cooldown end!", function()
+    for i,v in pairs(Game.Players:GetChildren()) do
+if v.Name ~= game.Players.LocalPlayer then
+Game:GetService("TeleportService"):Teleport(7633631511, v.Character)
+end
+end
+end)
+
+HalloweenSection:NewButton("Insta Win Halloween Trial | Fast Way!", "Teleport To Kabocha,talk to him!", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(158.60780334473, 18.963747024536, -1116.4407958984)
+end)
+
+
+
+local Misc = Window:NewTab("Misc")
+local MiscSection = Misc:NewSection("Misc")
+
+MiscSection:NewButton("Infinity Stamina", "Infinity Stamina", function()
+  local mt = getrawmetatable(game)
+local old = mt.__newindex
+setreadonly(mt, false)
+mt.__newindex = newcclosure(function(self, idx, val)
+   if tostring(self) == 'Stamina' and tostring(self).IsA(self, 'NumberValue') and idx == 'Value' then
+       val = 100
+   end
+   return old(self, idx, val)
+end)
+setreadonly(mt, true)
+end)
+
+
+MiscSection:NewButton("Full Bright", "Make your game at full brightness.", function()
+game.Lighting.Brightness = 5
+game.Lighting.ClockTime = 9
+game.Lighting.GlobalShadows = false
+end)
+
+
+MiscSection:NewToggle("Noclip", "Make you go through objects!", function(state)
+    getgenv().clip = state
+    game:GetService("RunService").Stepped:Connect(function()
+        if getgenv().clip then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        end
+    end)
+end)
